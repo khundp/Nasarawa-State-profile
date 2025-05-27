@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="refresh" content="0;url=nasarawa_profile.pdf#toolbar=0" />
-    <title>Nasarawa State Profile</title>
-  </head>
-  <body>
-    <p>If you're not redirected, <a href="nasarawa_profile.pdf">click here</a>.</p>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>State Profile Redirect</title>
+  <script>
+    window.onload = function () {
+      const params = new URLSearchParams(window.location.search);
+      const state = params.get("state");
+
+      if (state) {
+        const filename = `${state.toLowerCase()}.pdf#toolbar=0`;
+        window.location.href = filename;
+      } else {
+        document.body.innerHTML = `
+          <p>No state specified. Please use <code>?state=statename</code> in the URL.</p>
+          <p>Example: <a href="?state=nasarawa">?state=nasarawa</a></p>
+        `;
+      }
+    };
+  </script>
+</head>
+<body>
+  <p>Redirecting to the selected state profile...</p>
+</body>
 </html>
