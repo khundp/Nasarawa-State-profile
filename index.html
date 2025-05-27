@@ -2,47 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nigeria State Profiles</title>
+  <title>State Profiles - Nigeria Overview</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 30px;
-      background-color: #f9f9f9;
+      margin: 20px;
+      background: #f5f5f5;
       color: #333;
     }
-
     header {
       text-align: center;
       margin-bottom: 40px;
-      position: relative;
-      padding-right: 160px; /* space for logo */
-      border-bottom: 2px solid #0072bc;
-      padding-bottom: 20px;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-      color: #0072bc;
+    h1 {
+      margin-bottom: 5px;
     }
-
-    .logo {
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 60px;
-      width: auto;
+    .overview {
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
     }
-
-    p.overview {
-      max-width: 700px;
-      margin: 0 auto 50px auto;
-      font-size: 1.1em;
-      line-height: 1.5;
-      color: #555;
-    }
-
     .states-container {
       display: flex;
       flex-wrap: wrap;
@@ -51,51 +33,79 @@
       max-width: 900px;
       margin: 0 auto;
     }
-
     .state-button {
-      background-color: #0072bc;
+      background: #0077cc;
       color: white;
+      padding: 15px 25px;
       border: none;
-      padding: 14px 28px;
-      font-size: 1em;
       border-radius: 6px;
+      font-size: 1rem;
       cursor: pointer;
-      text-transform: capitalize;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
       transition: background-color 0.3s ease;
-      min-width: 130px;
+      min-width: 120px;
       text-align: center;
       text-decoration: none;
       display: inline-block;
     }
-
     .state-button:hover {
-      background-color: #005a8a;
+      background: #005fa3;
     }
-
   </style>
 </head>
 <body>
 
   <header>
     <h1>Nigeria State Profiles</h1>
-    <img src="undp_logo.png" alt="UNDP Logo" class="logo" />
     <p>Your gateway to detailed state information and overview</p>
   </header>
 
-  <p class="overview">
-    Welcome to the Nigeria State Profiles portal. Click on any state below to open its detailed profile PDF in a new tab.
-  </p>
+  <section class="overview">
+    <h2>General Overview of Nigeria</h2>
+    <p>
+      Nigeria is a country of rich diversity and dynamic states. Explore detailed profiles
+      for each state to learn about demographics, economy, culture, and more.
+    </p>
+    <p>
+      For a detailed look, click any state below:
+    </p>
+  </section>
 
-  <div class="states-container">
-    <a href="viewer.html?state=abia" target="_blank" class="state-button">Abia</a>
-    <a href="viewer.html?state=nasarawa" target="_blank" class="state-button">Nasarawa</a>
-    <a href="viewer.html?state=benue" target="_blank" class="state-button">Benue</a>
-    <!-- Add more states below -->
-    <a href="viewer.html?state=lagos" target="_blank" class="state-button">Lagos</a>
-    <a href="viewer.html?state=oyo" target="_blank" class="state-button">Oyo</a>
-    <a href="viewer.html?state=kano" target="_blank" class="state-button">Kano</a>
-  </div>
+  <section class="states-container">
+    <a href="viewer.html?state=abia" class="state-button" target="_blank" rel="noopener noreferrer">Abia</a>
+    <a href="viewer.html?state=adamawa" class="state-button" target="_blank" rel="noopener noreferrer">Adamawa</a>
+    <a href="viewer.html?state=akwaibom" class="state-button" target="_blank" rel="noopener noreferrer">Akwa Ibom</a>
+    <a href="viewer.html?state=anambra" class="state-button" target="_blank" rel="noopener noreferrer">Anambra</a>
+    <a href="viewer.html?state=bauchi" class="state-button" target="_blank" rel="noopener noreferrer">Bauchi</a>
+    <a href="viewer.html?state=benue" class="state-button" target="_blank" rel="noopener noreferrer">Benue</a>
+    <a href="viewer.html?state=borno" class="state-button" target="_blank" rel="noopener noreferrer">Borno</a>
+    <a href="viewer.html?state=delta" class="state-button" target="_blank" rel="noopener noreferrer">Delta</a>
+    <a href="viewer.html?state=ebonyi" class="state-button" target="_blank" rel="noopener noreferrer">Ebonyi</a>
+    <a href="viewer.html?state=edo" class="state-button" target="_blank" rel="noopener noreferrer">Edo</a>
+    <a href="viewer.html?state=ekiti" class="state-button" target="_blank" rel="noopener noreferrer">Ekiti</a>
+    <a href="viewer.html?state=enugu" class="state-button" target="_blank" rel="noopener noreferrer">Enugu</a>
+    <a href="viewer.html?state=gombe" class="state-button" target="_blank" rel="noopener noreferrer">Gombe</a>
+    <a href="viewer.html?state=imo" class="state-button" target="_blank" rel="noopener noreferrer">Imo</a>
+    <a href="viewer.html?state=jigawa" class="state-button" target="_blank" rel="noopener noreferrer">Jigawa</a>
+    <a href="viewer.html?state=kaduna" class="state-button" target="_blank" rel="noopener noreferrer">Kaduna</a>
+    <a href="viewer.html?state=kano" class="state-button" target="_blank" rel="noopener noreferrer">Kano</a>
+    <a href="viewer.html?state=katsina" class="state-button" target="_blank" rel="noopener noreferrer">Katsina</a>
+    <a href="viewer.html?state=kebbi" class="state-button" target="_blank" rel="noopener noreferrer">Kebbi</a>
+    <a href="viewer.html?state=kogi" class="state-button" target="_blank" rel="noopener noreferrer">Kogi</a>
+    <a href="viewer.html?state=kwara" class="state-button" target="_blank" rel="noopener noreferrer">Kwara</a>
+    <a href="viewer.html?state=lagos" class="state-button" target="_blank" rel="noopener noreferrer">Lagos</a>
+    <a href="viewer.html?state=nasarawa" class="state-button" target="_blank" rel="noopener noreferrer">Nasarawa</a>
+    <a href="viewer.html?state=niger" class="state-button" target="_blank" rel="noopener noreferrer">Niger</a>
+    <a href="viewer.html?state=ogun" class="state-button" target="_blank" rel="noopener noreferrer">Ogun</a>
+    <a href="viewer.html?state=ondo" class="state-button" target="_blank" rel="noopener noreferrer">Ondo</a>
+    <a href="viewer.html?state=osun" class="state-button" target="_blank" rel="noopener noreferrer">Osun</a>
+    <a href="viewer.html?state=oyo" class="state-button" target="_blank" rel="noopener noreferrer">Oyo</a>
+    <a href="viewer.html?state=plateau" class="state-button" target="_blank" rel="noopener noreferrer">Plateau</a>
+    <a href="viewer.html?state=rivers" class="state-button" target="_blank" rel="noopener noreferrer">Rivers</a>
+    <a href="viewer.html?state=sokoto" class="state-button" target="_blank" rel="noopener noreferrer">Sokoto</a>
+    <a href="viewer.html?state=taraba" class="state-button" target="_blank" rel="noopener noreferrer">Taraba</a>
+    <a href="viewer.html?state=yobe" class="state-button" target="_blank" rel="noopener noreferrer">Yobe</a>
+    <a href="viewer.html?state=zamfara" class="state-button" target="_blank" rel="noopener noreferrer">Zamfara</a>
+  </section>
 
 </body>
 </html>
