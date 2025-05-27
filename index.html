@@ -1,26 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>State Profile Redirect</title>
-  <script>
-    window.onload = function () {
-      const params = new URLSearchParams(window.location.search);
-      const state = params.get("state");
-
-      if (state) {
-        const filename = `${state.toLowerCase()}.pdf#toolbar=0`;
-        window.location.href = filename;
-      } else {
-        document.body.innerHTML = `
-          <p>No state specified. Please use <code>?state=statename</code> in the URL.</p>
-          <p>Example: <a href="?state=nasarawa">?state=nasarawa</a></p>
-        `;
-      }
-    };
-  </script>
+  <meta charset="UTF-8" />
+  <title>State Profiles - Nigeria Overview</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    h1 {
+      margin-bottom: 5px;
+    }
+    .overview {
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    .states-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .state-button {
+      background: #0077cc;
+      color: white;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      min-width: 120px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .state-button:hover {
+      background: #005fa3;
+    }
+  </style>
 </head>
 <body>
-  <p>Redirecting to the selected state profile...</p>
+
+  <header>
+    <h1>Nigeria State Profiles</h1>
+    <p>Your gateway to detailed state information and overview</p>
+  </header>
+
+  <section class="overview">
+    <h2>General Overview of Nigeria</h2>
+    <p>
+      Nigeria is a country of rich diversity and dynamic states. Explore detailed profiles
+      for each state to learn about demographics, economy, culture, and more.
+    </p>
+    <p>
+      For a detailed look, click any state below:
+    </p>
+  </section>
+
+  <section class="states-container">
+    <a href="viewer.html?state=abia" class="state-button">Abia</a>
+    <a href="viewer.html?state=adamawa" class="state-button">Adamawa</a>
+    <a href="viewer.html?state=akwaibom" class="state-button">Akwa Ibom</a>
+    <a href="viewer.html?state=anambra" class="state-button">Anambra</a>
+    <a href="viewer.html?state=bauchi" class="state-button">Bauchi</a>
+    <a href="viewer.html?state=benue" class="state-button">Benue</a>
+    <a href="viewer.html?state=borno" class="state-button">Borno</a>
+    <a href="viewer.html?state=delta" class="state-button">Delta</a>
+    <a href="viewer.html?state=ebonyi" class="state-button">Ebonyi</a>
+    <a href="viewer.html?state=edo" class="state-button">Edo</a>
+    <a href="viewer.html?state=ekiti" class="state-button">Ekiti</a>
+    <a href="viewer.html?state=ennei" class="state-button">Enugu</a>
+    <a href="viewer.html?state=gombe" class="state-button">Gombe</a>
+    <a href="viewer.html?state=imo" class="state-button">Imo</a>
+    <a href="viewer.html?state=jigawa" class="state-button">Jigawa</a>
+    <a href="viewer.html?state=kaduna" class="state-button">Kaduna</a>
+    <a href="viewer.html?state=kano" class="state-button">Kano</a>
+    <a href="viewer.html?state=katsina" class="state-button">Katsina</a>
+    <a href="viewer.html?state=kebbi" class="state-button">Kebbi</a>
+    <a href="viewer.html?state=kogi" class="state-button">Kogi</a>
+    <a href="viewer.html?state=kwara" class="state-button">Kwara</a>
+    <a href="viewer.html?state=lagos" class="state-button">Lagos</a>
+    <a href="viewer.html?state=nassarawa" class="state-button">Nasarawa</a>
+    <a href="viewer.html?state=noger" class="state-button">Niger</a>
+    <a href="viewer.html?state=ogun" class="state-button">Ogun</a>
+    <a href="viewer.html?state=ondo" class="state-button">Ondo</a>
+    <a href="viewer.html?state=osun" class="state-button">Osun</a>
+    <a href="viewer.html?state=oyo" class="state-button">Oyo</a>
+    <a href="viewer.html?state=plateau" class="state-button">Plateau</a>
+    <a href="viewer.html?state=rivers" class="state-button">Rivers</a>
+    <a href="viewer.html?state=sokoto" class="state-button">Sokoto</a>
+    <a href="viewer.html?state=taraba" class="state-button">Taraba</a>
+    <a href="viewer.html?state=yobe" class="state-button">Yobe</a>
+    <a href="viewer.html?state=zamfara" class="state-button">Zamfara</a>
+  </section>
+
 </body>
 </html>
