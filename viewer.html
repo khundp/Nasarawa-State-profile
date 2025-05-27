@@ -6,8 +6,10 @@
   <title>State PDF Viewer</title>
   <style>
     html, body {
-      margin: 0; padding: 0;
-      height: 100%; overflow-y: auto;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-y: auto;
       -webkit-overflow-scrolling: touch;
     }
     iframe {
@@ -24,16 +26,7 @@
     const state = params.get("state");
     if (state) {
       const url = `${state.toLowerCase()}.pdf#toolbar=0`;
-      // Detect if user is on mobile
-      const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-      if (isMobile) {
-        // On mobile, open PDF in new tab
-        document.body.innerHTML = `<p>Opening PDF in new tab for better mobile experience.<br><a href="${url}" target="_blank">Click here if it doesn't open automatically</a></p>`;
-        window.open(url, '_blank');
-      } else {
-        // On desktop, embed PDF in iframe
-        document.write(`<iframe src="${url}" allowfullscreen></iframe>`);
-      }
+      document.write(`<iframe src="${url}" allowfullscreen></iframe>`);
     } else {
       document.body.innerHTML = "<p>No state specified. Use ?state=abia in the URL.</p>";
     }
