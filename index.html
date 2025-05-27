@@ -2,29 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>State PDF Viewer</title>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
-    iframe {
-      border: none;
-      width: 100%;
-      height: 100%;
-    }
-  </style>
+  <title>State Profile Redirect</title>
+  <script>
+    window.onload = function () {
+      const params = new URLSearchParams(window.location.search);
+      const state = params.get("state");
+
+      if (state) {
+        const filename = `${state.toLowerCase()}.pdf#toolbar=0`;
+        window.location.href = filename;
+      } else {
+        document.body.innerHTML = `
+          <p>No state specified. Please use <code>?state=statename</code> in the URL.</p>
+          <p>Example: <a href="?state=nasarawa">?state=nasarawa</a></p>
+        `;
+      }
+    };
+  </script>
 </head>
 <body>
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const state = params.get("state");
-    if (state) {
-      document.write(`<iframe src="${state.toLowerCase()}.pdf#toolbar=0"></iframe>`);
-    } else {
-      document.body.innerHTML = "<p>No state specified. Use ?state=abia in the URL.</p>";
-    }
-  </script>
+  <p>Redirecting to the selected state profile...</p>
 </body>
 </html>
