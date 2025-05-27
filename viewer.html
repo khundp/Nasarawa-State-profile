@@ -24,9 +24,18 @@
   <script>
     const params = new URLSearchParams(window.location.search);
     const state = params.get("state");
+
     if (state) {
       const url = `${state.toLowerCase()}.pdf#toolbar=0`;
-      document.write(`<iframe src="${url}" allowfullscreen></iframe>`);
+      const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
+      if (isMobile) {
+        // Just redirect directly, no message
+        window.location.href = url;
+      } else {
+        // On desktop, show iframe
+        document.write(`<iframe src="${url}" allowfullscreen></iframe>`);
+      }
     } else {
       document.body.innerHTML = "<p>No state specified. Use ?state=abia in the URL.</p>";
     }
