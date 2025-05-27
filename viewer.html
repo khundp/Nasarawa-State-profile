@@ -5,18 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>State PDF Viewer</title>
   <style>
-    /* Allow scrolling and full height */
     html, body {
       margin: 0; 
       padding: 0; 
-      height: 100%; 
-      overflow-y: auto; /* enable vertical scroll */
-      -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+      height: 100%;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
     }
     iframe {
       border: none;
-      width: 100vw;    /* full viewport width */
-      height: 100vh;   /* full viewport height */
+      width: 100vw;
+      min-height: 150vh; /* bigger than viewport, so iframe scrolls */
       display: block;
     }
   </style>
