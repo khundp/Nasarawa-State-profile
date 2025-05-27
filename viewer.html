@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>State PDF Viewer</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const state = params.get("state");
+    if (state) {
+      const url = `${state.toLowerCase()}.pdf#toolbar=0`;
+      document.write(`<iframe src="${url}" allowfullscreen></iframe>`);
+    } else {
+      document.body.innerHTML = "<p>No state specified. Use ?state=abia in the URL.</p>";
+    }
+  </script>
+</body>
+</html>
