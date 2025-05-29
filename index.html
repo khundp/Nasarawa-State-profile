@@ -35,9 +35,17 @@
       color: #0072bc;
     }
 
+
+    .header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding-top: 10px;
+}
     .logo {
-      position: absolute;
-      top: 0;
+/*       position: absolute;
+      top: 0; */
       right: 0;
       height: 100px;
       width: auto;
@@ -160,11 +168,14 @@
 </head>
 <body>
 
-  <header>
-    <h1>Nigeria State Profiles</h1>
+<header>
+  <div class="header-container">
     <img src="undp_logo.png" alt="UNDP Logo" class="logo" />
-    <p>Your gateway to detailed state information and overview</p>
-  </header>
+    <h1>Nigeria State Profiles</h1>
+  </div>
+  <p>Your gateway to detailed state information and overview</p>
+</header>
+
 
   <main>
     <p class="overview">Click on any state for a detailed overview</p>
