@@ -5,18 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nigeria State Profiles</title>
   <style>
-    body {
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
       font-family: Arial, sans-serif;
-      margin: 30px;
       background-color: #f9f9f9;
       color: #333;
+    }
+
+    main {
+      flex: 1;
     }
 
     header {
       text-align: center;
       margin-bottom: 40px;
       position: relative;
-      padding-right: 160px; /* space for logo */
+      padding-right: 160px;
       border-bottom: 2px solid #0072bc;
       padding-bottom: 20px;
     }
@@ -43,30 +50,14 @@
       color: #555;
     }
 
-
-    @media (max-width: 768px) {
-  .state-button {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-
-  .states-container {
-    gap: 10px;
-    padding: 0 10px;
-  }
-}
-
-
-    
     .states-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
       gap: 15px;
       max-width: 900px;
-      margin: 0 auto;
+      margin: 0 auto 50px;
     }
-
 
     .state-button {
       background-color: #0072bc;
@@ -89,44 +80,69 @@
       background-color: #005a8a;
     }
 
+    @media (max-width: 768px) {
+      .state-button {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+
+      .states-container {
+        gap: 10px;
+        padding: 0 10px;
+      }
+    }
+
+    footer {
+      background-color: #0468B1;
+      color: white;
+      padding: 40px 20px 20px 20px;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-left {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .footer-left img {
+      height: 90px;
+      margin-right: 15px;
+    }
+
+    .footer-links {
+      text-align: right;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .footer-icons img {
+      height: 24px;
+      margin-right: 10px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 20px;
+      border-top: 1px solid white;
+      padding-top: 15px;
+    }
   </style>
 </head>
-
-<footer style="background-color: #0468B1; color: white; font-family: Arial, sans-serif; padding: 40px 20px 20px 20px;">
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto;">
-    
-    <div style="display: flex; align-items: center; margin-bottom: 20px;">
-      <a href="https://www.undp.org" target="_blank" rel="noopener noreferrer">
-        <img src="UNDP_logo_White.png" alt="UNDP Logo" style="height: 90px; margin-right: 15px;" />
-      </a>
-      <div style="line-height: 1.3;">
-        <div>United Nations</div>
-        <div>Development Programme</div>
-      </div>
-    </div>
-
-    <div style="text-align: right;">
-      <div style="margin-bottom: 10px;">
-       
-        <a href="https://www.undp.org/copyright-terms-use" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none;">Terms Of Use</a>
-      </div>
-      <div style="margin-top: 15px;">
-        <a href="https://www.facebook.com/undpafricaofficial/" target="_blank" rel="noopener noreferrer"><img src="facebook-social-media.svg" alt="Facebook" style="height: 24px; margin-right: 10px;"></a>
-        <a href="https://www.linkedin.com/company/undp/" target="_blank" rel="noopener noreferrer"><img src="linkedin-social-media.svg" alt="LinkedIn" style="height: 24px; margin-right: 10px;"></a>
-        <a href="https://www.instagram.com/undpafrica/" target="_blank" rel="noopener noreferrer"><img src="instagram-social-media.svg" alt="Instagram" style="height: 26px; margin-right: 10px;"></a>
-        <a href="https://x.com/UNDPAfrica" target="_blank" rel="noopener noreferrer"><img src="x-social-media.svg" alt="X" style="height: 20px; margin-right: 10px;"></a>
-        <a href="https://www.youtube.com/channel/UCORDtUtSkmv3CMrffA2wuSg" target="_blank" rel="noopener noreferrer"><img src="youtube-social-media.svg" alt="YouTube" style="height: 26px;"></a>
-      </div>
-    </div>
-  </div>
-
-  <hr style="border-top: 1px solid white; margin: 30px auto; max-width: 1200px;">
-  
-  <div style="text-align: center; font-size: 14px;">© 2024 United Nations Development Programme</div>
-</footer>
-
-
-  
 <body>
 
   <header>
@@ -135,47 +151,72 @@
     <p>Your gateway to detailed state information and overview</p>
   </header>
 
-  <p class="overview">
-    Click on any state for a detailed overview
-  </p>
+  <main>
+    <p class="overview">Click on any state for a detailed overview</p>
+    <div class="states-container">
+      <a href="viewer.html?state=abia" class="state-button" target="_blank">Abia</a>
+      <a href="viewer.html?state=adamawa" class="state-button" target="_blank">Adamawa</a>
+      <a href="viewer.html?state=akwaibom" class="state-button" target="_blank">Akwa Ibom</a>
+      <a href="viewer.html?state=anambra" class="state-button" target="_blank">Anambra</a>
+      <a href="viewer.html?state=bauchi" class="state-button" target="_blank">Bauchi</a>
+      <a href="viewer.html?state=benue" class="state-button" target="_blank">Benue</a>
+      <a href="viewer.html?state=borno" class="state-button" target="_blank">Borno</a>
+      <a href="viewer.html?state=crossriver" class="state-button" target="_blank">Cross River</a>
+      <a href="viewer.html?state=delta" class="state-button" target="_blank">Delta</a>
+      <a href="viewer.html?state=ebonyi" class="state-button" target="_blank">Ebonyi</a>
+      <a href="viewer.html?state=edo" class="state-button" target="_blank">Edo</a>
+      <a href="viewer.html?state=ekiti" class="state-button" target="_blank">Ekiti</a>
+      <a href="viewer.html?state=enugu" class="state-button" target="_blank">Enugu</a>
+      <a href="viewer.html?state=gombe" class="state-button" target="_blank">Gombe</a>
+      <a href="viewer.html?state=imo" class="state-button" target="_blank">Imo</a>
+      <a href="viewer.html?state=jigawa" class="state-button" target="_blank">Jigawa</a>
+      <a href="viewer.html?state=kaduna" class="state-button" target="_blank">Kaduna</a>
+      <a href="viewer.html?state=kano" class="state-button" target="_blank">Kano</a>
+      <a href="viewer.html?state=katsina" class="state-button" target="_blank">Katsina</a>
+      <a href="viewer.html?state=kebbi" class="state-button" target="_blank">Kebbi</a>
+      <a href="viewer.html?state=kogi" class="state-button" target="_blank">Kogi</a>
+      <a href="viewer.html?state=kwara" class="state-button" target="_blank">Kwara</a>
+      <a href="viewer.html?state=lagos" class="state-button" target="_blank">Lagos</a>
+      <a href="viewer.html?state=nasarawa" class="state-button" target="_blank">Nasarawa</a>
+      <a href="viewer.html?state=niger" class="state-button" target="_blank">Niger</a>
+      <a href="viewer.html?state=ogun" class="state-button" target="_blank">Ogun</a>
+      <a href="viewer.html?state=ondo" class="state-button" target="_blank">Ondo</a>
+      <a href="viewer.html?state=osun" class="state-button" target="_blank">Osun</a>
+      <a href="viewer.html?state=oyo" class="state-button" target="_blank">Oyo</a>
+      <a href="viewer.html?state=plateau" class="state-button" target="_blank">Plateau</a>
+      <a href="viewer.html?state=rivers" class="state-button" target="_blank">Rivers</a>
+      <a href="viewer.html?state=sokoto" class="state-button" target="_blank">Sokoto</a>
+      <a href="viewer.html?state=taraba" class="state-button" target="_blank">Taraba</a>
+      <a href="viewer.html?state=yobe" class="state-button" target="_blank">Yobe</a>
+      <a href="viewer.html?state=zamfara" class="state-button" target="_blank">Zamfara</a>
+    </div>
+  </main>
 
-  <div class="states-container">
-<a href="viewer.html?state=abia" class="state-button" target="_blank" rel="noopener noreferrer">Abia</a>
-    <a href="viewer.html?state=adamawa" class="state-button" target="_blank" rel="noopener noreferrer">Adamawa</a>
-    <a href="viewer.html?state=akwaibom" class="state-button" target="_blank" rel="noopener noreferrer">Akwa Ibom</a>
-    <a href="viewer.html?state=anambra" class="state-button" target="_blank" rel="noopener noreferrer">Anambra</a>
-    <a href="viewer.html?state=bauchi" class="state-button" target="_blank" rel="noopener noreferrer">Bauchi</a>
-    <a href="viewer.html?state=benue" class="state-button" target="_blank" rel="noopener noreferrer">Benue</a>
-    <a href="viewer.html?state=borno" class="state-button" target="_blank" rel="noopener noreferrer">Borno</a>
-    <a href="viewer.html?state=crossriver" class="state-button" target="_blank" rel="noopener noreferrer">Cross River</a>
-    <a href="viewer.html?state=delta" class="state-button" target="_blank" rel="noopener noreferrer">Delta</a>
-    <a href="viewer.html?state=ebonyi" class="state-button" target="_blank" rel="noopener noreferrer">Ebonyi</a>
-    <a href="viewer.html?state=edo" class="state-button" target="_blank" rel="noopener noreferrer">Edo</a>
-    <a href="viewer.html?state=ekiti" class="state-button" target="_blank" rel="noopener noreferrer">Ekiti</a>
-    <a href="viewer.html?state=enugu" class="state-button" target="_blank" rel="noopener noreferrer">Enugu</a>
-    <a href="viewer.html?state=gombe" class="state-button" target="_blank" rel="noopener noreferrer">Gombe</a>
-    <a href="viewer.html?state=imo" class="state-button" target="_blank" rel="noopener noreferrer">Imo</a>
-    <a href="viewer.html?state=jigawa" class="state-button" target="_blank" rel="noopener noreferrer">Jigawa</a>
-    <a href="viewer.html?state=kaduna" class="state-button" target="_blank" rel="noopener noreferrer">Kaduna</a>
-    <a href="viewer.html?state=kano" class="state-button" target="_blank" rel="noopener noreferrer">Kano</a>
-    <a href="viewer.html?state=katsina" class="state-button" target="_blank" rel="noopener noreferrer">Katsina</a>
-    <a href="viewer.html?state=kebbi" class="state-button" target="_blank" rel="noopener noreferrer">Kebbi</a>
-    <a href="viewer.html?state=kogi" class="state-button" target="_blank" rel="noopener noreferrer">Kogi</a>
-    <a href="viewer.html?state=kwara" class="state-button" target="_blank" rel="noopener noreferrer">Kwara</a>
-    <a href="viewer.html?state=lagos" class="state-button" target="_blank" rel="noopener noreferrer">Lagos</a>
-    <a href="viewer.html?state=nasarawa" class="state-button" target="_blank" rel="noopener noreferrer">Nasarawa</a>
-    <a href="viewer.html?state=niger" class="state-button" target="_blank" rel="noopener noreferrer">Niger</a>
-    <a href="viewer.html?state=ogun" class="state-button" target="_blank" rel="noopener noreferrer">Ogun</a>
-    <a href="viewer.html?state=ondo" class="state-button" target="_blank" rel="noopener noreferrer">Ondo</a>
-    <a href="viewer.html?state=osun" class="state-button" target="_blank" rel="noopener noreferrer">Osun</a>
-    <a href="viewer.html?state=oyo" class="state-button" target="_blank" rel="noopener noreferrer">Oyo</a>
-    <a href="viewer.html?state=plateau" class="state-button" target="_blank" rel="noopener noreferrer">Plateau</a>
-    <a href="viewer.html?state=rivers" class="state-button" target="_blank" rel="noopener noreferrer">Rivers</a>
-    <a href="viewer.html?state=sokoto" class="state-button" target="_blank" rel="noopener noreferrer">Sokoto</a>
-    <a href="viewer.html?state=taraba" class="state-button" target="_blank" rel="noopener noreferrer">Taraba</a>
-    <a href="viewer.html?state=yobe" class="state-button" target="_blank" rel="noopener noreferrer">Yobe</a>
-    <a href="viewer.html?state=zamfara" class="state-button" target="_blank" rel="noopener noreferrer">Zamfara</a>
-  </section>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <a href="https://www.undp.org" target="_blank">
+          <img src="UNDP_logo_White.png" alt="UNDP Logo" />
+        </a>
+        <div>
+          <div>United Nations</div>
+          <div>Development Programme</div>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="https://data.undp.org/" target="_blank">Data Futures Exchange</a>
+        <a href="https://www.undp.org/copyright-terms-use" target="_blank">Terms Of Use</a>
+        <div class="footer-icons" style="margin-top: 10px;">
+          <a href="https://www.facebook.com/undpafricaofficial/" target="_blank"><img src="facebook-social-media.svg" alt="Facebook"></a>
+          <a href="https://www.linkedin.com/company/undp/" target="_blank"><img src="linkedin-social-media.svg" alt="LinkedIn"></a>
+          <a href="https://www.instagram.com/undpafrica/" target="_blank"><img src="instagram-social-media.svg" alt="Instagram"></a>
+          <a href="https://x.com/UNDPAfrica" target="_blank"><img src="x-social-media.svg" alt="X"></a>
+          <a href="https://www.youtube.com/channel/UCORDtUtSkmv3CMrffA2wuSg" target="_blank"><img src="youtube-social-media.svg" alt="YouTube"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2024 United Nations Development Programme</div>
+  </footer>
 
 </body>
 </html>
