@@ -83,9 +83,11 @@ p.overview {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  flex: 1 1 calc(20% - 12px); /* 💡 This is the key change */
-  max-width: calc(20% - 12px); /* Optional: prevents overflow */
+
+  flex: 0 0 calc(20% - 12px); /* fixed width = 5 per row */
+  max-width: calc(20% - 12px);
 }
+
 
 
     .state-button:hover {
