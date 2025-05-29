@@ -20,23 +20,22 @@
     }
 
     /* ===== HEADER ===== */
-    .header-bar {
-      padding: 20px;
-      border-bottom: 2px solid #0072bc;
-    }
+.header-bar {
+  padding: 20px;
+  border-bottom: 2px solid #0072bc;
+}
 
-    .header-left {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
+.header-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
 
-    .header-left h1 {
-      margin: 0;
-      font-size: 2.5em;
-      color: #0072bc;
-    }
-
+.header-left h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: #0072bc;
+}
     .logo {
       height: 100px;
       width: auto;
@@ -155,13 +154,16 @@
 </head>
 <body>
 
-  <header class="header-bar">
-    <div class="header-left">
-      <img src="undp_logo.png" alt="UNDP Logo" class="logo" />
+ <header class="header-bar">
+  <div class="header-left">
+    <img src="undp_logo.png" alt="UNDP Logo" class="logo" />
+    <div>
       <h1>Nigeria State Profiles</h1>
+      <p class="subtext">Your gateway to detailed state information and overview</p>
     </div>
-    <p class="subtext">Your gateway to detailed state information and overview</p>
-  </header>
+  </div>
+</header>
+
 
   <main>
      <p class="overview">Click on any state for a detailed overview</p>
