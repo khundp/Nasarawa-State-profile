@@ -12,11 +12,31 @@
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
     }
+
     iframe {
       border: none;
       width: 100vw;
       height: 100vh;
       display: block;
+    }
+
+    #back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #0072bc;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 5px;
+      font-size: 14px;
+      text-decoration: none;
+      z-index: 9999;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s;
+    }
+
+    #back-button:hover {
+      background-color: #005a94;
     }
   </style>
 </head>
@@ -30,11 +50,12 @@
       const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
       if (isMobile) {
-        // Just redirect directly, no message
         window.location.href = url;
       } else {
-        // On desktop, show iframe
-        document.write(`<iframe src="${url}" allowfullscreen></iframe>`);
+        document.body.innerHTML = `
+          <a id="back-button" href="https://khundp.github.io/nigeriastateprofile/">&larr; Back</a>
+          <iframe src="${url}" allowfullscreen></iframe>
+        `;
       }
     } else {
       document.body.innerHTML = "<p>No state specified. Use ?state=abia in the URL.</p>";
