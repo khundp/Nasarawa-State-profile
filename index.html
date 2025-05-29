@@ -29,20 +29,23 @@
       padding-top: 20px; 
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-      color: #0072bc;
-    }
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: #0072bc;
+  margin-top: 5px; /* fine-tunes vertical alignment */
+}
 
 
-    .header-container {
+
+.header-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Aligns items by their top edge */
   justify-content: center;
   gap: 15px;
   padding-top: 10px;
 }
+
     .logo {
 /*       position: absolute;
       top: 0;
