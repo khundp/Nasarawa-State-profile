@@ -78,6 +78,22 @@
       background-color: #005a8a;
     }
 
+.states-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding-left: 0; /* aligns with buttons */
+}
+
+.overview {
+  font-size: 1.1em;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+
+    
     .state-button.no-pdf {
       background-color: #90bfe0;
       cursor: not-allowed;
@@ -166,8 +182,11 @@
 
 
   <main>
-     <p class="overview">Click on any state for a detailed overview</p>
-    <div class="states-container">
+<div class="states-section">
+  <p class="overview">Click on any state for a detailed overview</p>
+  <div class="states-container">
+
+
       <!-- Example state buttons -->
       <a href="#" class="state-button" data-state="abia">Abia</a>
       <a href="#" class="state-button" data-state="adamawa">Adamawa</a>
@@ -205,6 +224,9 @@
       <a href="#" class="state-button" data-state="yobe">Yobe</a>
       <a href="#" class="state-button" data-state="zamfara">Zamfara</a>
     </div>
+    </div> <!-- end states-container -->
+</div> <!-- end states-section -->
+
   </main>
 
   <footer>
